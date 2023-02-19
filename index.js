@@ -14,13 +14,13 @@ app.use("/user" , userRoute)
 app.use(authenticate)
 app.use("/notes" , notesRouter)
 
- app.listen(7300, async ()=>{
+ app.listen(process.env.port, async ()=>{
     try{
         await connection
         console.log("connected to db")
     }catch(err){
         console.log(err)
     }
-    console.log("server started at 7300")
+    console.log(`server started at ${process.env.port}`)
  })
 

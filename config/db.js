@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 require('dotenv').config()
 mongoose.set("strictQuery" , false)
 
-const connection = mongoose.connect("mongodb+srv://abhijeet:abhijeet@cluster0.eumbfwa.mongodb.net/mini?retryWrites=true&w=majority")
+const connection = mongoose.connect(process.env.url)
 // mongodb://127.0.0.1:27017/react
 
 
